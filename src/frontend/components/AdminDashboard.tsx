@@ -35,7 +35,7 @@ export default function AdminDashboard({ dresses, onRefreshDresses, onLogout, us
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem('fashion_catalog_admin_session') === 'true';
   });
-  const [loginEmail, setLoginEmail] = useState('vaishakh884@gmail.com');
+  const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
 
@@ -330,20 +330,6 @@ export default function AdminDashboard({ dresses, onRefreshDresses, onLogout, us
             </p>
           </div>
 
-          {/* Helper Credentials card */}
-          <div className="rounded-xl bg-neutral-50 border border-neutral-200/60 p-4">
-            <div className="flex items-start gap-3 text-xs text-neutral-600">
-              <AlertCircle size={16} className="text-neutral-500 shrink-0 mt-0.5" />
-              <div>
-                <span className="font-semibold block text-neutral-800">Exclusive Admin ID Credentials:</span>
-                <div className="mt-1.5 space-y-1 text-[11px] font-mono text-neutral-500">
-                  <p>Email: <code className="bg-neutral-200/60 px-1.5 py-0.5 rounded text-[10px] text-neutral-900 select-all">vaishakh884@gmail.com</code></p>
-                  <p>Password: <code className="bg-neutral-200/60 px-1.5 py-0.5 rounded text-[10px] text-neutral-900 select-all">admin123</code></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {loginError && (
             <div className="rounded-xl bg-red-50 border border-red-100 p-3 text-xs text-red-600 flex items-center gap-2">
               <AlertCircle size={14} className="shrink-0" />
@@ -366,7 +352,7 @@ export default function AdminDashboard({ dresses, onRefreshDresses, onLogout, us
                   required
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
-                  placeholder="vaishakh884@gmail.com"
+                  placeholder="admin@example.com"
                   className="w-full rounded-xl border border-neutral-200 bg-neutral-50/50 py-3 pr-4 pl-10 text-xs text-neutral-900 placeholder-neutral-400 focus:bg-white focus:border-neutral-950 focus:outline-hidden transition-all duration-200 shadow-2xs"
                 />
               </div>

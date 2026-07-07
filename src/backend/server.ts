@@ -177,7 +177,7 @@ async function startServer() {
 
     try {
       let list = await db.select().from(dresses);
-      if (list.length === 0) {
+      if (list.length === 0 && INITIAL_DRESSES.length > 0) {
         console.log('Seeding initial dresses into Cloud SQL...');
         await db.insert(dresses).values(INITIAL_DRESSES);
         list = await db.select().from(dresses);
