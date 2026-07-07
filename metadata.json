@@ -1,0 +1,6 @@
+{
+  "name": "Fashion Catalog",
+  "description": "A responsive fashion aggregator and affiliate catalog website featuring curate dresses, admin management dashboard, secure login, and affiliate purchase redirection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
